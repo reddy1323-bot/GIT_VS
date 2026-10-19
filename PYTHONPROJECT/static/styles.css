@@ -1,0 +1,285 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #202b3c;
+  background: #f4f6f9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+.page {
+  width: min(1080px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 52px 0 32px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #738098;
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.13em;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-size: clamp(2rem, 5vw, 2.7rem);
+  letter-spacing: -0.055em;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  letter-spacing: -0.025em;
+}
+
+.subtitle {
+  margin-bottom: 0;
+  color: #738098;
+}
+
+.header-mark {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border-radius: 16px;
+  background: #e8edff;
+  color: #4059c7;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.panel {
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid #e7eaf0;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 4px 18px rgb(27 42 74 / 3%);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 23px 24px 18px;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 5px;
+}
+
+.product-form {
+  display: grid;
+  grid-template-columns: minmax(180px, 1.4fr) minmax(120px, 0.8fr) minmax(120px, 0.8fr) auto;
+  align-items: end;
+  gap: 16px;
+  padding: 0 24px 24px;
+}
+
+label {
+  display: grid;
+  gap: 7px;
+  color: #526078;
+  font-size: 0.8rem;
+  font-weight: 650;
+}
+
+input {
+  width: 100%;
+  min-width: 0;
+  height: 40px;
+  padding: 0 11px;
+  border: 1px solid #dfe4ec;
+  border-radius: 7px;
+  background: #fff;
+  color: #202b3c;
+  font: inherit;
+  outline: none;
+}
+
+input:focus {
+  border-color: #7084e7;
+  box-shadow: 0 0 0 3px rgb(86 111 220 / 13%);
+}
+
+.input-prefix {
+  position: relative;
+}
+
+.input-prefix > span {
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  color: #8792a4;
+}
+
+.input-prefix input {
+  padding-left: 25px;
+}
+
+.button {
+  min-height: 40px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 7px;
+  background: #4059c7;
+  color: #fff;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 120ms ease, transform 120ms ease;
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #3048b4;
+}
+
+.button:disabled {
+  background: #c7cedd;
+  cursor: not-allowed;
+}
+
+.button-small {
+  min-height: 34px;
+  padding: 0 12px;
+}
+
+.count-badge {
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #f0f2f7;
+  color: #627089;
+  font-size: 0.75rem;
+  font-weight: 650;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 13px 24px;
+  border-top: 1px solid #edf0f4;
+  white-space: nowrap;
+}
+
+th {
+  color: #8590a2;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+td {
+  color: #58657a;
+  font-size: 0.84rem;
+}
+
+.product-name,
+.sale-total {
+  color: #26344b;
+  font-weight: 650;
+}
+
+.stock-empty {
+  color: #ba4450;
+}
+
+.sell-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sell-form input {
+  width: 68px;
+  height: 34px;
+}
+
+.empty-state {
+  padding: 25px 24px;
+  color: #8792a4;
+  text-align: center;
+}
+
+.notice {
+  margin: -12px 0 20px;
+  padding: 12px 15px;
+  border: 1px solid #d6e9df;
+  border-radius: 8px;
+  background: #eff8f2;
+  color: #286b43;
+  font-size: 0.85rem;
+}
+
+.notice-error {
+  border-color: #f0d7d9;
+  background: #fff3f3;
+  color: #9d353d;
+}
+
+footer {
+  padding: 8px 0;
+  color: #8993a4;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .page {
+    width: min(100% - 28px, 600px);
+    padding-top: 32px;
+  }
+
+  .product-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product-form label:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .product-form .button {
+    grid-column: 1 / -1;
+  }
+
+  th,
+  td {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+}
